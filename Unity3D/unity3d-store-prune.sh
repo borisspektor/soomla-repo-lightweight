@@ -1,0 +1,77 @@
+#!/bin/sh
+
+FILES=(
+	soomla-unity3d-store.unitypackage
+    Soomla/Assets/Plugins/iOS/libSoomlaIOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/iOSStore/debug/libSoomlaiOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/iOSStore/libSoomlaiOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/iOSStore/libSoomlaiOSStore_testing.a
+    soomla-native/compilations/ios/iOSStore/libSoomlaiOSStore_testing.a
+    soomla-unity3d-core.unitypackage
+    deploy/out/soomla-unity3d-core.unitypackage
+    deploy/out/soomla-unity3d-store.unitypackage
+    soomla-native/ios/libSoomlaIOSStore_release.a
+    soomla-unity3d-store_release-v1.5.2.unitypackage
+    soomla-native/ios/release/libSoomlaIOSStore.a
+    soomla-native/compilations/ios/release/libSoomlaIOSStore.a
+    soomla-native/compilations/ios/iOSStore/libSoomlaiOSStore.a
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/Newtonsoft.Json.6.0.4.nupkg
+    unity3.5/Assets/Plugins/iOS/libSoomlaIOSStore.a
+    soomla-native/ios/libSoomlaIOSStore_debug.a
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Release-iphoneos/SoomlaIOSStore.build/build-state~.dat
+    soomla-native/compilations/ios/debug/libSoomlaIOSStore.a
+    unity3.5/Assets/Plugins/iOS/libSoomlaIOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/iOSStore/release/libSoomlaiOSStore.a
+    Soomla/Assets/Plugins/iOS/libSoomlaIOSCore.a
+    unity4.0/Assets/Plugins/iOS/libSoomlaIOSStore.a
+    soomla-native/ios/debug/libSoomlaIOSStore.a
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Release-iphoneos/SoomlaIOSStore.build/build-state.dat
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net45/Newtonsoft.Json.dll
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Debug-iphoneos/SoomlaIOSStore.build/build-state~.dat
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net20/Newtonsoft.Json.xml
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Release-iphoneos/SoomlaIOSStore.build/Objects-normal/armv7/libSoomlaIOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/iOSStore/debug/libSoomlaiOSCore.a
+    src/Assets/Plugins/iOS/libSoomlaIOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/iOSStore/release/libSoomlaiOSCore.a
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/netcore45/Newtonsoft.Json.dll
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net40/Newtonsoft.Json.xml
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net20/Newtonsoft.Json.dll
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Release-iphoneos/SoomlaIOSStore.build/Objects-normal/armv7s/libSoomlaIOSStore.a
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Debug-iphoneos/SoomlaIOSStore.build/build-state.dat
+    Soomla/Assets/Plugins/iOS/libUnityiOSStore.a
+    Soomla/Assets/Soomla/compilations/wp8/x86/sqlite3.soomladll
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
+    Soomla/Assets/Soomla/compilations/wp8/x86/sqlite3.soomladll
+    Soomla/Assets/Plugins/Newtonsoft.Json.dll
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net45/Newtonsoft.Json.xml
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net40/Newtonsoft.Json.dll
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net35/Newtonsoft.Json.xml
+    Soomla/Assets/Plugins/WP8/Newtonsoft.Json.dll
+    Soomla/Assets/Soomla/compilations/ios/release/libUnityiOSStore.a
+    Soomla/Assets/Soomla/compilations/ios/debug/libUnityiOSStore.a
+    soomla-native/compilations/android/Soomla_debug.jar
+    soomla-native/android/Soomla_debug.jar
+    soomla-native/compilations/ios/debug/libUnityiOSStore.a
+    soomla-native/compilations/ios/release/libUnityiOSStore.a
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/net35/Newtonsoft.Json.dll
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/netcore45/Newtonsoft.Json.xml
+    soomla-native/compilations/android/Soomla_release.jar
+    soomla-native/android/Soomla_release.jar
+    soomla-native/compilations/android/AndroidStore/AndroidStore_forTest.jar
+    soomla-native/projects/unity-wp8-fake-assembly/wp-store/packages/Newtonsoft.Json.6.0.4/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml
+    unity3.5/Assets/Plugins/Android/Soomla.jar
+    unity4.0/Assets/Plugins/Android/Soomla.jar
+    Soomla/Assets/Plugins/Android/AndroidStore.jar
+    Soomla/Assets/Plugins/Android/Soomla.jar
+    soomla-native/compilations/android/AndroidStore/AndroidStore.jar
+    src/Assets/Plugins/Android/Soomla.jar
+    Soomla/Assets/Soomla/compilations/android/AndroidStore/AndroidStore.jar
+    Soomla/Assets/Plugins/WP8/wp-store.dll
+    Soomla/Assets/Plugins/WP8/soomla-wp-core.dll
+    soomla-native/projects/ios-store/build/SoomlaIOSStore.build/Debug-iphoneos/SoomlaIOSStore.build/Objects-normal/armv7/StoreInfo.o
+    
+)
+
+./pruner.sh ${FILES[@]}
