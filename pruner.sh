@@ -10,7 +10,7 @@ do
 	echo "Pruning $ARG..."
 done
 
-git filter-branch --tag-name-filter cat --index-filter "git rm --cached --ignore-unmatch $*" --prune-empty -f -- --all
+git filter-branch --tag-name-filter cat --index-filter "git rm -r --cached --ignore-unmatch $*" --prune-empty -f -- --all
 
 echo "Collecting garbage..."
 rm -rf .git/refs/original/
