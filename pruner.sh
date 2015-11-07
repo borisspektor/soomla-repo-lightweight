@@ -5,6 +5,9 @@ for branch in `git branch -a | grep remotes | grep -v HEAD | grep -v master`; do
     git branch --track ${branch##*/} $branch
 done
 
+echo "Dropping all untracked changes..."
+git reset --hard
+
 for ARG in "$@"
 do
 	echo "Pruning $ARG..."
