@@ -17,4 +17,4 @@ Scripts to reduce SOOMLA repo sizes. This repo will be removed after completing.
     - and ask you to perform `git push --hard` for all branches and all tags (you can decline it, but should do it later manually).
     
 ## Caveats
-    - All commits will be updated, so all commit hashes will be re-calculated and all old commit refs/PRs will be broken;
+  - All commits will be updated, so all commit hashes will be re-calculated and all old commit refs/PRs will be broken;
