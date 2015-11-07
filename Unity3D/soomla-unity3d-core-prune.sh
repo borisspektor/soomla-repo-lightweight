@@ -1,8 +1,8 @@
 #!/bin/sh
 
 FILES=(
-	soomla-unity3d-core.unitypackage 
-	deploy/out/soomla-unity3d-core.unitypackage
+	*.unitypackage
+	deploy/out/
     Soomla/Assets/Plugins/iOS/libUnitySoomlaiOSCore.a
     Soomla/Assets/Plugins/iOS/libSoomlaIOSCore.a
     Soomla/Assets/Plugins/Android/square-otto-1.3.2.jar
