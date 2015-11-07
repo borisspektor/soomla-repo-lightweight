@@ -1,18 +1,16 @@
 #!/bin/sh
 
 FILES=(
-    soomla-unity3d-profile.unitypackage
+    *.unitypackage
     Soomla/Assets/Plugins/iOS/FacebookSDK.framework
     Soomla/Assets/Plugins/iOS/libSTTwitter.a
     deploy/out
-    FacebookSDK-140401.unitypackage
     Soomla/Assets/Plugins/iOS/libSoomlaIOSStore.a
     Soomla/Assets/Plugins/iOS/libSoomlaiOSProfile.a
     Soomla/Assets/Plugins/iOS/libSoomlaiOSCore.a
     soomla-native/projects/unity-ios-store/build
     soomla-native/projects/unity-android-store/build
     Soomla/Assets/Plugins/iOS/libSoomlaiOSProfileFacebook.a
-    soomla-unity3d-core.unitypackage
     Soomla/Assets/Plugins/iOS/libSoomlaiOSProfileTwitter.a
     Soomla/Assets/Plugins/iOS/libUnityiOSStore.a
     Soomla/Assets/Plugins/Android/twitter4j-core-4.0.2.jar
