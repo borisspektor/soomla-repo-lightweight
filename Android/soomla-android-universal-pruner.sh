@@ -9,7 +9,6 @@ FILES=(
      social-providers/android-profile-twitter/build
      social-providers/android-profile-facebook/build
      social-providers/android-profile-google/build
-     SoomlaAndroidLevelUp/tests
 )
 
 ./pruner.sh ${FILES[@]}
