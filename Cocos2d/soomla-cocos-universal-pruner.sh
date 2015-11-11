@@ -14,8 +14,6 @@ FILES=(
      developement/soomla-native/projects/cocos2dx-android-profile/build
      development/soomla-native/projects/cocos2dx-ios-profile/build
      development/soomla-native/projects/cocos2dx-android-profile/build
-
-     development/testing
 )
 
 ./pruner.sh ${FILES[@]}
