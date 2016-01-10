@@ -20,6 +20,22 @@ rm -rf .git/refs/original/
 git reflog expire --expire=now --all
 git gc --aggressive --prune=now
 
+
+git submodule init
+git submodule update
+for submodule_folder in `find ./submodules -type d -maxdepth 1`
+do
+        cd $submodule_folder
+        pwd
+        commit_hash_raw="$(git log origin/master | head -1)"
+        commit_hash_splitted=($commit_hash_raw)
+        echo ${commit_hash_splitted[1]}
+        git checkout ${commit_hash_splitted[1]}
+        cd -
+        git add $submodule_folder
+done
+git commit -m "Update submodules"
+
 read -p "Do you want to push changes immediately? If no, you should push all branches and all tags with --force parameter:" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
